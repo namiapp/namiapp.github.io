@@ -1,0 +1,73 @@
+<!-- templates/home.html -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Homegrown style -->
+		<link rel="stylesheet" type="text/css" href="{% static 'mapper/style.css' %}" />
+
+		<!-- Animate.js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+		<title>Nami</title>
+
+	</head>
+
+	<body>
+		<!-- Nav Bar -->
+		<div id="navbar">
+			<a href="/" class = "active">Home</a>
+			<a href="/about/" >About</a>
+			<a href="/login/" >Log In</a>
+		</div>
+
+		<!-- Image banner -->
+		<div id="ocean-banner" class="center-img">
+		</div>
+
+		<!-- Title Banner -->
+		<div id="title-banner" class="animated bounceInUp" class="center-text" >
+				<center><h1>Welcome to Nami.<br>
+				「波」へようこそ。</h1></center>
+		</div>
+
+		<!-- Map -->
+		<div id="map" class="center-obj">
+			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KiJBmLoUqAtjcvxLafae7wEt3HwbUbPQ" width="800" height="500"></iframe>
+		</div>
+
+		<!-- Text intro #1 -->
+		<div id="intro1" class="animated bounceInUp" class="center-text">
+			<center><h2> Introducing a new way for LGBT college students to connect.</h2>
+
+				<h3> 新たなLGBTの大学生向けの連絡し合う方法が登場。</h3>
+			</h2></center>
+		</div>
+
+
+		<!-- Example diagram #1 -->
+		<div id="doge-banner" class="center-img">
+
+
+		</div>
+		<!-- activate sticky navbar -->
+		<script>
+			window.onscroll = function() {myFunction()};
+
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+
+			function myFunction() {
+  				if (window.pageYOffset >= sticky) {
+    				navbar.classList.add("sticky")
+  				} else {
+    			navbar.classList.remove("sticky");
+  				}
+			}
+		</script>
+	</body>
+</html>
