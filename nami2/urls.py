@@ -14,8 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+	# Frontpage App: is located at root
+	path('', include('frontpage.urls')),
+	
+	# Accounts App: handles all of the authentication
+	path('', include('django.contrib.auth.urls')),
+	path('', include('accounts.urls')),
+
+	# Admin
     path('admin/', admin.site.urls),
 ]
