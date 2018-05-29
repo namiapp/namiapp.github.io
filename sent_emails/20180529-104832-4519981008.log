@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: yeeruhuang@gmail.com
+Date: Tue, 29 May 2018 10:48:32 -0000
+Message-ID: 
+ <152759091254.76370.10445786830511899311@Aileens-MacBook-Pro.local>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/reset/MQ/4wl-8e9b291d1c9f60536427/
+
+Your username, in case you've forgotten: aileen
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------

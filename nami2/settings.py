@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts',
     'frontpage',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,5 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# LOGIN_REDIRECT_URL = '/'
 
+# LOGIN redirects
+LOGIN_REDIRECT_URL = '/home'
+LOGOUT_REDIRECT_URL = '/'
+
+# EMAIL server for password reset
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+
+AUTH_USER_MODEL = 'users.CustomUser'
