@@ -1,12 +1,20 @@
 from django.db import models
-from django.utils import timezone
-from django.contrib.auth.models import AbstractUser
-from django.dispatch import receiver
+from django.contrib.auth.models import (
+    BaseUserManager, AbstractBaseUser
+)
 
+class CustomUser(AbstractBaseUser):
+    email = models.EmailField(
+        verbose_name='email address',
+        max_length=255,
+        unique=True,
+    )
+    date_of_birth = models.DateField()
+    is_active = models.BooleanField(default=True)
+    is_admin = models.BooleanField(default=False)
 
-# Student subclasses AbstractUser, which subclasses AbstractBaseUser
-class CustomUser(AbstractUser):
-	name = models.CharField(blank=True, max_length=255)
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['date_of_birth']
 
-	def __str__(self):
-		return self.email
+    def __str__(self):
+        return self.email

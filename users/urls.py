@@ -3,7 +3,7 @@ from django.urls import path, include
 
 from . import views
 
-app_name = 'accounts'
+app_name = 'users'
 urlpatterns = [
     path('home/', views.HomeView.as_view(), name='home'),
 	# authentication URLS

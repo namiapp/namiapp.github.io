@@ -20,9 +20,9 @@ urlpatterns = [
 	# Frontpage App: is located at root
 	path('', include('frontpage.urls')),
 	
-	# Accounts App: handles all of the authentication
+	# Users App: handles all of the authentication
 	path('', include('django.contrib.auth.urls')),
-	path('', include('accounts.urls')),
+	path('', include('users.urls')),
 
 	# Admin
     path('admin/', admin.site.urls),
