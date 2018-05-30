@@ -1,0 +1,21 @@
+2018-05-30 15:02:05.136 JST [89914] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-30 15:02:05.136 JST [89914] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-30 15:02:05.138 JST [89914] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-30 15:02:05.158 JST [89915] LOG:  database system was shut down at 2018-05-30 15:01:15 JST
+2018-05-30 15:02:05.164 JST [89914] LOG:  database system is ready to accept connections
+2018-05-30 15:02:14.449 JST [89927] ERROR:  role "Aileen" already exists
+2018-05-30 15:02:14.449 JST [89927] STATEMENT:  CREATE ROLE "Aileen" SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+2018-05-30 15:02:20.400 JST [89929] ERROR:  role "testdb" does not exist
+2018-05-30 15:02:20.400 JST [89929] STATEMENT:  CREATE DATABASE "Aileen" OWNER testdb;
+2018-05-30 15:02:24.589 JST [89933] ERROR:  database "testdb" already exists
+2018-05-30 15:02:24.589 JST [89933] STATEMENT:  CREATE DATABASE testdb OWNER "Aileen";
+2018-05-30 15:04:34.006 JST [90045] FATAL:  database "/Users/Aileen/code/nami/db.postgresql" does not exist
+2018-05-30 15:05:08.367 JST [90057] FATAL:  role "postgres" does not exist
+2018-05-30 15:05:18.793 JST [90063] FATAL:  database "/Users/Aileen/code/nami/db.postgresql" does not exist
+2018-05-30 15:06:14.930 JST [90087] FATAL:  database "/Users/Aileen/code/nami/db.postgresql" does not exist
+2018-05-30 15:07:04.378 JST [90101] ERROR:  database "postgres" already exists
+2018-05-30 15:07:04.378 JST [90101] STATEMENT:  CREATE DATABASE postgres;
+2018-05-30 15:07:26.858 JST [90113] ERROR:  database "Aileen" already exists
+2018-05-30 15:07:26.858 JST [90113] STATEMENT:  CREATE DATABASE "Aileen";
+2018-05-30 15:07:37.189 JST [90117] FATAL:  database "/Users/Aileen/code/nami/db.postgresql" does not exist
+2018-05-30 15:08:24.334 JST [90135] FATAL:  database "/Users/Aileen/code/nami/db.postgresql" does not exist
