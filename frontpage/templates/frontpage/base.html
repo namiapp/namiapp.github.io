@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Homegrown style -->
+		<link rel="stylesheet" type="text/css" href="{% static 'frontpage/style.css' %}" />
+
+		<link rel="stylesheet" type="text/css" href="{% static 'frontpage/normalize.css' %}" />
+
+		<!-- Animate.js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+		<title>Nami</title>
+
+	</head>
+
+	<body>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script><script>new WOW().init();</script>
+
+		<!-- Nav Bar -->
+		<div id="navbar">
+				<a href="/about/"><button class='button'>
+					このサイトについて
+				</button></a>
+				<a href="/login/" ><button class='button'>
+					ログイン
+				</button></a>
+		</div>
+		{% block content %}{% endblock content %}
+	</body>
+</html>

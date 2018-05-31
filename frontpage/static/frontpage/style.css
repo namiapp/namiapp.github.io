@@ -1,109 +1,50 @@
-/* NAV styling - don't touch */
+body, html {
+  height:      100%;
+  font-weight: 300;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  margin: 0px;
+}
+
+a{
+  text-decoration: none!important;
+}
+
+/*----------- NAV styling - don't touch ---------- */
 
 #navbar {
-  overflow: hidden;
   background-color: #333;
-}
-
-/* Navbar links */
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+.button {
+  background-color:#333;
+  text-decoration: none;
+  /*color: black;*/
+  border:none;
+  color: white;
 }
+/*#navbar a:visited {*/
+  /*color: gray;*/
+/*}*/
 
-h1 {
-    font-size: 10vw;
-    font-weight: 50;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-}
+ /*Change background on mouse-over */
+/*#navbar a:hover {*/
+    /*background: #ddd;*/
+    /*color: black;*/
+/*}*/
 
-h2 {
-    font-size: 6vw;
-    font-weight: 50;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-}
+/*#navbar a:active{*/
+    /*background:#ddd;*/
+/*}*/
 
-h3 {
-    font-size: 4vw;
-    font-weight: 50;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-}
-
-body {
-	font-weight: 300;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	margin: 0px;
-}
-
-img {
-    display: inline;
-    max-width: 100%;
-    margin: 0 auto;
-    height: 100%
-    width: auto;
-    /*object-fit: cover;*/
-}
-
-/* CLASS styling */
-
-/* For the text banners that need to be centered - DONE for now */
-.center-text
-{
-    padding: 8px;
-    text-align:center;
-    background-color: white;
-}
-
-.center-obj {
-    text-align: center;
-}
-
-.center-img {
-    width: auto;
-    height:300px;
-}
-
-
-/* ID STYLING */
-#ocean-banner {
-    background: white url("images/ocean_waves.jpg") no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
-#title-banner {
-    padding:30px;
-}
-
+/* --------------- MAP STYLING ---------------*/
 #map{
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
     height:0;
+
 }
 #map iframe{
     left:0;
@@ -112,53 +53,97 @@ img {
     width:100%;
     position:absolute;
 }
-/*#intro1 {*/
 
-#doge-banner {
-    background: white url("images/doge.jpg") no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+.wow {
+   visibility: hidden;
+}
+
+/* --------------------- FONT STYLING ------------------- */
+
+h1 {
+    font-size: 5vw;
+    font-weight: 50;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    text-shadow: 2px 2px 2px gray;
+}
+
+h2 {
+    font-size: 4vw;
+    font-weight: 50;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+h3 {
+    font-size: 3vw;
+    font-weight: 50;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+/* ~*~*~*~*~*~*~*~*~*~*~*~*CLASS STYLING~*~*~*~*~*~*~*~*~*~~**~~ */
+
+/* Text banners that should be centered vertically and horizontally*/
+.text-in-image {
+    /* vertical positioning */
+    display: inline-block;
+    vertical-align: middle;
+    line-height:normal;
+    
+    /* horizontal positioning */
+    /*position:absolute;*/
+    /*text-align:center;*/
+    /*width: 100%*/
+}
+
+.bg {
+    -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  position:relative;
+  height: 100%;
+  line-height: 200px;
+  text-align:center;
+  display: block;
+
+  /* To cover and fill up the entire background*/
+  background: white url("images/ocean_waves.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+   /*Grayscale filters */
 }
 
 
+/* ---------------------- TITLE BUTTON STYLING---------------- */
 
-
-
-/*previous code*/
-
-/*#navbar a {
-    float: left;
-    display: block;
-    color:  #737373;
+#title-button {
+    /*-webkit-transition-duration: 0.4s;*/
+    /*transition-duration: 0.4s;*/
+    background-color: #44cc00;
+    border: none;
+    color: white;
+    padding: 10px 50px;
     text-align: center;
-    padding: 14px 16px;
+    display: inline-block;
+    font-size:2vw;
+    margin: 4px 2px;
+    border-radius: 20px 20px;
     text-decoration: none;
-    font-size: 15px;
-    font-family: "Arial Narrow", sans-serif;
 }
 
-#navbar a:hover {
-    background-color: #bfbfbf;
-    color:  #737373 ;
+#title-button:hover {
+  background-color: #55ff00;
+  color: white;
 }
 
-#navbar a.active {
-  background-color: #bfbfbf;
-  color:    #737373 ;
+#title-button a:visited{
+  color: white;
 }
 
-.content {
-    padding: 16px;
-}
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 
-.sticky + .content {
-    padding-top: 60px;
-}*/
+/* ~*~*~*~*~*~*~*~**~*~*~* ID STYLING ~*~*~*~*~*~*~*~*~**~*~*~* */
+
+#title-text {
+    color: white;
+    /*padding:300px;*/
+    font-weight: bold;
+}
