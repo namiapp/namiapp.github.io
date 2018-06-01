@@ -24,6 +24,9 @@ urlpatterns = [
 	path('', include('django.contrib.auth.urls')),
 	path('', include('users.urls')),
 
+    # site translation
+    path('', include('django.conf.urls.i18n')),
+
 	# Admin
     path('admin/', admin.site.urls),
 ]

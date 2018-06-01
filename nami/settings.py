@@ -147,3 +147,5 @@ CHANNEL_LAYERS = {
        "ROUTING": "multichat.routing.channel_routing", # We will create it in a moment
     },
 }
+
+USE_I18N = True
